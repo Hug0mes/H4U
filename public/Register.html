@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro | H4U</title>
   <link rel="stylesheet" href="../css/login.css" />
+  <script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -20,12 +21,12 @@
       <form>
         <div class="group">
           <label>Nome</label>
-          <i class="fas fa-envelope"></i><input type="text" placeholder="Nome" />
+          <i class="fas fa-envelope"></i><input type="text"  id="Nome" placeholder="ex: Hugo Gomes" />
         </div>
 
         <div class="group">
           <label>Email</label>
-          <i class="fas fa-envelope"></i><input type="email" placeholder="examplo@compania.com" />
+          <i class="fas fa-envelope"></i><input type="email" id="Email" placeholder="examplo@compania.com" />
         </div>
 
         <div class="group">
@@ -33,51 +34,56 @@
           <i class="fas fa-envelope"></i>
           <select name="Genero" id="Genero">
             <option></option>
-            <option value="1">Homem</option>
-            <option value="2">Mulher</option>
-            <option value="3">Outro...</option>
+            <option value="Masculino">Maculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Outro">Outro...</option>
           </select>
         </div>
 
         <div class="group">
           <label>Data de Nascimento</label>
-          <i class="fas fa-envelope"></i><input type="date" placeholder="Nome" />
+          <i class="fas fa-envelope"></i><input type="date" id="Dtn" placeholder="Nome" />
         </div>
 
         <div class="group">
           <label>Distrito</label>
           <i class="fas fa-envelope"></i>
-          <select name="Distritos" id="Distritos">
+          <select name="Distritos" id="Regiao">
             <option></option>
-            <option value="1">Aveiro</option>
-            <option value="2">Beja</option>
-            <option value="3">Braga</option>
-            <option value="4">Bragança</option>
-            <option value="5">Castelo Branco</option>
-            <option value="6">Coimbra</option>
-            <option value="7">Évora</option>
-            <option value="8">Faro</option>
-            <option value="9">Guarda</option>
-            <option value="10">Leiria</option>
-            <option value="11">Lisboa</option>
-            <option value="12">Portalegre</option>
-            <option value="13">Porto</option>
-            <option value="14">Santarém</option>
-            <option value="15">Setúbal</option>
-            <option value="16">Viana do Castelo</option>
-            <option value="17">Vila Real</option>
-            <option value="18">Viseu</option>
+            <option value="Aveiro">Aveiro</option>
+            <option value="Beja">Beja</option>
+            <option value="Braga">Braga</option>
+            <option value="Bragança">Bragança</option>
+            <option value="Castelo Branco">Castelo Branco</option>
+            <option value="Coimbra">Coimbra</option>
+            <option value="Évora">Évora</option>
+            <option value="Faro">Faro</option>
+            <option value="Guarda">Guarda</option>
+            <option value="Leiria">Leiria</option>
+            <option value="Lisboa">Lisboa</option>
+            <option value="Portalegre">Portalegre</option>
+            <option value="Porto">Porto</option>
+            <option value="Santarém">Santarém</option>
+            <option value="Setúbal">Setúbal</option>
+            <option value="Viana do Castelo">Viana do Castelo</option>
+            <option value="Vila Real">Vila Real</option>
+            <option value="Viseu">Viseu</option>
           </select>
+        </div>
+
+          <div class="group">
+          <label>Rua</label>
+          <i class="fas fa-envelope"></i><input type="text"  id="Morada" placeholder="Ex: Rua 1º de Maio" />
         </div>
 
         <div class="group">
           <label>Password</label>
-          <i class="fas fa-unlock-alt"></i><input type="password" placeholder="Password" />
+          <i class="fas fa-unlock-alt"></i><input type="password" id="Password" placeholder="Password" />
         </div>
 
         <div class="group">
           <label>Confirmar Password</label>
-          <i class="fas fa-unlock-alt"></i><input type="password" placeholder="Confirmar 
+          <i class="fas fa-unlock-alt"></i><input type="password" id="Rpassword" placeholder="Confirmar 
  Password" />
         </div>
 
@@ -86,11 +92,11 @@
           <label>Eu concordo com os termos e condições</label>
         </div>
 
-        <input type="button" value="Sign in" />
+        <input type="button" onclick="register()" value="Sign in" />
 
         <p>
-          Já tens uma conta? <span><a href="Login.html">Login</a> </span> <br>
-          <a href="../index.html">H4U</a> 
+          Já tens conta? →
+     <a href="../index.html">H4U</a> 
         </p>
       </form>
     </div>
